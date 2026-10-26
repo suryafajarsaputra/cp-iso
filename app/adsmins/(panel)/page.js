@@ -1,2 +1,2 @@
 import { redirect } from 'next/navigation';
-export default function Index() { redirect('/adsmins/gallery'); }
+export default function Index() { redirect('/adsmins/content'); }
