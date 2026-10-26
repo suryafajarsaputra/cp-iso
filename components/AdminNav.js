@@ -15,9 +15,10 @@ export default function AdminNav() {
     <aside className="adm-side">
       <img src="/logo-clear.png" alt="ISO" />
       <nav>
+        {item('/adsmins/content', 'Konten website')}
+        {item('/adsmins/banners', 'Banner atas')}
         {item('/adsmins/gallery', 'Galeri foto')}
         {item('/adsmins/contacts', 'Pesan masuk')}
-        {item('/adsmins/settings', 'Info kontak')}
         <a href="/" target="_blank" rel="noreferrer">Lihat website</a>
       </nav>
       <button onClick={logout}>Keluar</button>
