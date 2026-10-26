@@ -10,7 +10,7 @@ export default function Login() {
     setBusy(true); setErr('');
     const body = Object.fromEntries(new FormData(e.currentTarget));
     const r = await fetch('/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-    if (r.ok) { window.location.href = '/adsmins/gallery'; return; }
+    if (r.ok) { window.location.href = '/adsmins/content'; return; }
     setErr((await r.json()).error || 'Gagal masuk.');
     setBusy(false);
   }
