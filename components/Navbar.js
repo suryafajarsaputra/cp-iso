@@ -1,21 +1,13 @@
 'use client';
 import { useState } from 'react';
 
-const links = [
-  ['#tentang', 'Tentang'],
-  ['#layanan', 'Layanan'],
-  ['#keunggulan', 'Keunggulan'],
-  ['#galeri', 'Galeri'],
-  ['#kontak', 'Kontak'],
-];
-
-export default function Navbar() {
+export default function Navbar({ links = [], brand = 'ISO' }) {
   const [open, setOpen] = useState(false);
   return (
     <header className="nav">
       <div className="wrap nav-in">
-        <a href="#top" className="brand" aria-label="ISO beranda">
-          <img src="/logo-clear.png" alt="ISO" />
+        <a href="#top" className="brand" aria-label={`${brand} beranda`}>
+          <img src="/logo-clear.png" alt={brand} />
         </a>
         <button className="burger" aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /><span /><span />
